@@ -149,7 +149,7 @@
     .mobile-menu {
       position: absolute;
       background-color: var(--white);
-      top: 60px;
+      top: 100px;
       left: 0;
       width: calc(100% - 24px);
       padding-left: 24px;
@@ -378,6 +378,7 @@
     color: var(--very-light-pink);
     margin-top: 0;
     margin-bottom: 4px;
+    min-width: 300px;
   }
   .product-card .product-info div p:nth-child(2) {
     font-size: var(--sm);

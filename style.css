@@ -184,10 +184,11 @@
   /* Aside (product detail y carrito */
   aside {
     background-color: var(--white);
-    width: 360px;
+    width: 40%;
     /* padding: 0 24px; */
     box-sizing: border-box;
     position: absolute;
+    margin: 0 auto;
     right: 0;
     border-radius: 10px;
     /* background-color: var(--hospital-green); */
@@ -297,7 +298,7 @@
   }
   #product-detail > img:nth-child(2) {
     width: 100%;
-    height: 360px;
+    height: 500px;
     object-fit: cover;
     border-radius: 0 0 20px 20px;
   }
@@ -345,17 +346,20 @@
   
   .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
+    grid-template-columns: repeat(auto-fill, 400px);
     gap: 26px;
     place-content: center;
     margin-top: 20px;
+    min-height: 60%;
   }
   .product-card {
-    width: 240px;
+    width: 370px;
+    min-height: 370px;
+    /* min-width: 400px; */
   }
   .product-card img {
-    width: 240px;
-    height: 240px;
+    width: 400px;
+    height: 300px;
     border-radius: 20px;
     object-fit: cover;
   }
@@ -378,7 +382,7 @@
     color: var(--very-light-pink);
     margin-top: 0;
     margin-bottom: 4px;
-    min-width: 300px;
+    /* min-width: 300px; */
   }
   .product-card .product-info div p:nth-child(2) {
     font-size: var(--sm);
@@ -389,7 +393,7 @@
   }
   
   
-  @media (max-width: 640px) {
+  @media (max-width: 840px) {
     .menu {
       display: block;
     }
@@ -411,16 +415,75 @@
       grid-template-columns: repeat(auto-fill, 300px);
     }
     .product-card {
-      width: 140px;
+      width: 300px;
     }
     .product-card img {
       width: 300px;
       height: 250px;
     }
+
+    footer .left ul{
+      font-size: 0.5rem;
+  }
+
+  footer .right ul{
+    font-size: 1rem;
+}
   
   }
-  @media (min-width: 641px) {
+  @media (min-width: 841px) {
     .mobile-menu{
       display: none;
     }
   }
+
+  footer{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--hospital-green);
+    border-top: 2px solid var(--black);
+    border-radius: 5px;
+
+}
+
+footer section{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+    /* color: var(--white); */
+}
+footer .right ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.right,
+.left li{
+  margin: 10px 0;
+}
+
+.right,
+.left a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* #logo-gestamor{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./assets/icons/heart.svg);
+  vertical-align: text-bottom;
+   background-color: aquamarine; 
+} */

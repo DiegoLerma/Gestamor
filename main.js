@@ -220,7 +220,7 @@ function renderProducts(arr){
 
 
 renderProducts(productList)
-renderInfo(productList)
+// renderInfo(productList)
 
 
 
@@ -254,5 +254,5 @@ function openProductDetailAside(){
 }
 
 function closeProductDetailAside(){
-    imgClose.classList.add("inactive")
+    asideInfo.classList.add("inactive")
 }

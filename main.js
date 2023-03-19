@@ -72,6 +72,16 @@ productList.push({
     price: "Preguntas frecuentes",
     image: "https://images.pexels.com/photos/6991905/pexels-photo-6991905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ,
 })
+productList.push({
+    name: "Si sufres cualquier forma de violencia en casa, esto podría serte útil",
+    price: "Violencia obstétrica",
+    image: "https://images.pexels.com/photos/3802075/pexels-photo-3802075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ,
+})
+productList.push({
+    name: "Descubre el método para no embarazarte ideal para tí",
+    price: "Planificación familiar",
+    image: "https://degrees.fhi360.org/wp-content/uploads/2022/11/blog-fp-22-square-850X567.jpg" ,
+})
 
 /* <div class="product-card">
 <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">

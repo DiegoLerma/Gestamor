@@ -7,7 +7,7 @@
     --light-pink: #9E86DB;
     --very-light-pink: #D0ADE0;
     --text-input-field: #F4D4EC;
-    --beige: #EEF4D4;
+    --beige: #919098 ;
     --sm: 16px;
     --md: 20px;
     --lg: 25px;
@@ -302,14 +302,18 @@
   
   .product-detail-close {
     background: var(--white);
+    top: 24px; 
+    left: 50px;
+    position: sticky;
     width: 17px;
     height: 17px;
-    position: absolute;
-    top: 24px;
-    left: 24px;
+    /* position: absolute; */
     z-index: 2;
     padding: 12px;
     border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: solid 1px var(--beige);
   }
 
   .product-detail-close img{
@@ -520,6 +524,11 @@
 
   footer .right ul{
     font-size: 1rem;
+}
+
+.product-detail-close {
+    /* margin-left: 5px; */
+    left: 20px;
 }
   
   }

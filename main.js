@@ -486,6 +486,7 @@ function renderInfo(arr){
         const infoButton=document.createElement('button')
         infoButton.classList.add('primary-button')
         infoButton.classList.add('add-to-cart-button')
+        infoButton.addEventListener('click',closeProductDetailAside)
         const infoCheckImg=document.createElement('img')
         infoCheckImg.setAttribute('src','./assets/icons/check-circle.svg')
         const pButton=document.createElement('p')

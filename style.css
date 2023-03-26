@@ -200,7 +200,7 @@
   /* Aside (product detail y carrito */
   aside {
     background-color: var(--white);
-    width: 100%;
+    /* width: 100%; */
     /* padding: 0 24px; */
     box-sizing: border-box;
     position: absolute;
@@ -345,6 +345,7 @@
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 4px;
+    color: var(--light-pink);
   }
   .productCardGeneral .productInfoContent {
     color: var(--black);
@@ -371,7 +372,7 @@
     height: 50px;
   }
   .add-to-cart-button {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
   }

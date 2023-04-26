@@ -9,103 +9,7 @@ const bodyContainer=document.querySelector('.body')
 const productDetailCloser=document.querySelector('.product-detail-close')
 const productInfoContainer=document.getElementsByClassName('productCardGeneral')
 
-
-// class ProductInfo{
-//     constructor(title, subtitle, image, content, id){
-//         this.title=title
-//         this.subtitle=subtitle
-//         this.image=image
-//         this.content=content
-//         this.uid=id
-//     }
-
-//     openProductDetailAside(){
-//         console.log(this.uid)
-//         let productCardClass=`.product-detail-${this.uid}`
-//         console.log(productCardClass)
-//         const productCardSelected=document.querySelector(productCardClass)
-//         productCardSelected.classList.toggle("inactive")
-//         mobileMenu.classList.add("inactive")
-//         desktopMenu.classList.add("inactive")    
-//         shoppingCartMenu.classList.add("inactive")
-        
-         
-//     }
-
-// }
-
-    // class ProductList{
-    //     constructor(){
-    //         this.productList=[]
-    //     }
-    //     newProduct(title, subtitle, image, content, id){
-    //         let p = new ProductInfo(title, subtitle, image, content, id)
-    //         this.productList.push(p)
-    //         return p
-    //     }
-    //     get getList(){
-    //         return this.productList
-    //     }
-    //     get numberOfProducts(){
-    //         return this.productList.length
-    //     }
-    // }
-
-    // let allProductsInfo=new ProductList()
-    // p1=new ProductInfo(
-    // "Medicamentos prohibidos",
-    // "Conoce qué medicamentos y sustancias no debes tomar durante el embarazo",
-    // "https://images.pexels.com/photos/5207306/pexels-photo-5207306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ,
-    // `En primer lugar, es importante que siempre consultes con tu médico o profesional de la salud antes de tomar cualquier medicamento durante el embarazo. Aunque hay algunos medicamentos que están prohibidos en ciertos trimestres del embarazo, esto puede variar según tu situación médica y la de tu bebé.
-
-    // Dicho esto, aquí hay una guía general sobre algunos medicamentos que se consideran inseguros en cada trimestre del embarazo:
-    
-    // Primer trimestre: Durante este período crítico de desarrollo fetal, se deben evitar la mayoría de los medicamentos. Algunos de los medicamentos que se deben evitar incluyen:
-    
-    // Retinoides orales: estos medicamentos se usan comúnmente para tratar el acné y la psoriasis, pero pueden ser teratogénicos, lo que significa que pueden dañar al feto en desarrollo.
-    
-    // AINEs: Los medicamentos antiinflamatorios no esteroideos (AINEs), como el ibuprofeno, deben evitarse en el primer trimestre, ya que se ha demostrado que aumentan el riesgo de aborto espontáneo y malformaciones fetales.
-    
-    // Tetraciclinas: Estos antibióticos se utilizan para tratar una amplia variedad de infecciones, pero pueden interferir con el desarrollo óseo del feto.
-    
-    // Segundo trimestre: Durante este período, muchos medicamentos que antes estaban prohibidos pueden ser utilizados de forma segura bajo supervisión médica. Sin embargo, aún se deben evitar algunos medicamentos, incluyendo:
-    
-    // Algunos AINEs: Aunque los AINEs se consideran seguros después del primer trimestre, algunos estudios han demostrado que pueden aumentar el riesgo de complicaciones en el embarazo, incluyendo el parto prematuro.
-    
-    // Algunos antibióticos: Mientras que algunos antibióticos son seguros durante el embarazo, otros, como las fluoroquinolonas, pueden dañar al feto en desarrollo.
-    
-    // Tercer trimestre: Durante este período, el feto está cerca de la madurez y la mayoría de los medicamentos son seguros de usar. Sin embargo, aún hay algunos medicamentos que deben evitarse, incluyendo:
-    
-    // AINEs: Aunque la mayoría de los AINEs son seguros después del primer trimestre, todavía pueden aumentar el riesgo de complicaciones durante el parto, como hemorragia y prolongación del trabajo de parto.
-    
-    // Algunos medicamentos para el dolor: Algunos analgésicos, como la codeína y la oxicodona, pueden causar problemas respiratorios en el recién nacido si se usan cerca del momento del parto.
-    
-    // Es importante recordar que estos son solo algunos ejemplos de los medicamentos que deben evitarse durante ciertos trimestres del embarazo, y que cada mujer embarazada es diferente. Siempre debes hablar con tu médico antes de tomar cualquier medicamento para asegurarte de que es seguro para ti y tu bebé en desarrollo.`,
-    // 'med',
-    // )
-
-    // p2=new ProductInfo(
-    //         "Análisis de sangre",
-    //         "Conoce más sobre tus laboratorios",
-    //         "https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ,
-    //         `Durante el embarazo, es importante que te realices los análisis de sangre que los médicos te pidan. Estos análisis son esenciales para garantizar que tanto tú como tu bebé estén sanos y para detectar cualquier problema de salud que pueda surgir durante el embarazo.
-        
-    //         Aquí hay algunas razones importantes por las que debes realizarte los análisis de sangre durante el embarazo:
-            
-    //         Detectar posibles problemas de salud: Los análisis de sangre pueden detectar posibles problemas de salud tanto para ti como para tu bebé en desarrollo. Por ejemplo, se pueden realizar análisis para detectar la presencia de enfermedades de transmisión sexual, anemia, diabetes gestacional y otras afecciones médicas.
-            
-    //         Monitorear el desarrollo del feto: Algunos análisis de sangre pueden ayudar a monitorear el desarrollo del feto en el útero, como el análisis de alfafetoproteína (AFP). Este análisis se realiza para detectar posibles problemas de desarrollo del feto, como defectos del tubo neural.
-            
-    //         Prepararse para el parto: Los análisis de sangre también son importantes para prepararte para el parto. Los médicos pueden usar los resultados de tus análisis de sangre para determinar si necesitas una transfusión de sangre durante el parto o si necesitas recibir tratamiento para prevenir la transmisión de enfermedades al bebé.
-            
-    //         Evaluar la salud materna: Los análisis de sangre pueden ayudar a evaluar la salud materna durante el embarazo, lo que es especialmente importante si tienes alguna afección médica preexistente. Los análisis de sangre pueden detectar si tu cuerpo está produciendo suficientes glóbulos rojos y blancos, si tus niveles de azúcar en la sangre son estables y si tienes suficientes nutrientes esenciales para mantener la salud materna y fetal.
-            
-    //         En resumen, los análisis de sangre son una parte importante del cuidado prenatal y pueden ayudar a detectar posibles problemas de salud tanto para ti como para tu bebé. Asegúrate de preguntar a tu médico si tienes alguna pregunta o inquietud sobre los análisis de sangre que te solicitan durante el embarazo.`,
-    //         'blood', 
-    // )
-
 productList=[]
-// productList.push(p1,p2)
 
 productList.push({
     title: "Medicamentos prohibidos",
@@ -359,24 +263,6 @@ productList.push({
     },
 })
 
-/* 
-
-<div class="product-card">
-<img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-<div class="product-info">
-  <div>
-    <p>$120,00</p>
-    <p>Bike</p>
-  </div>
-  <figure>
-    <img src="./icons/bt_add_to_cart.svg" alt="">
-  </figure>
-</div>
-</div> 
-
-*/
-
-
 function renderProducts(arr){
     for(product of arr){
     const productCard=document.createElement('div')
@@ -407,37 +293,6 @@ function renderProducts(arr){
     productCard.append(productImg,productInfo)
     cardsContainer.appendChild(productCard)
 }}
-
-
-/* <aside id="product-detail"> 
- 
- <div class="product-detail-close">
-   <img src="./assets/icons/icon_close.png" alt="close">
- </div>
- <img src="https://taracoleman.com/wp-content/uploads/2012/09/pexels-photo-414262-700x1024.jpeg" alt="Plato de comida">
- <div class="product-info">
-   <p>Cambios en el estilo de vida</p>
-   <p>Durante el embarazo, es importante que las mujeres adopten un estilo de vida saludable para asegurar su propia salud y la del feto. Algunos de los principales cambios en el estilo de vida recomendados para una mujer embarazada incluyen:
-
-       Alimentación saludable: Las mujeres embarazadas deben asegurarse de obtener una nutrición adecuada para apoyar el crecimiento y desarrollo del feto. Se recomienda una dieta equilibrada que incluya una variedad de alimentos ricos en nutrientes, como frutas, verduras, proteínas magras y grasas saludables.
-       
-       Control del peso: Es importante que las mujeres embarazadas controlen su peso durante el embarazo. El aumento de peso recomendado puede variar según la edad gestacional de la paciente y su índice de masa corporal antes del embarazo.
-       
-       Actividad física: Las mujeres embarazadas deben mantenerse activas durante el embarazo siempre y cuando no tengan contraindicaciones médicas. El ejercicio regular puede ayudar a mantener una buena salud y disminuir el riesgo de complicaciones durante el embarazo y el parto. Se recomienda consultar con el médico antes de comenzar cualquier programa de ejercicio.
-       
-       Abstinencia de drogas, tabaco y alcohol: Las mujeres embarazadas deben evitar el consumo de drogas, tabaco y alcohol durante el embarazo, ya que pueden tener efectos negativos en el desarrollo fetal.
-       
-       Sueño adecuado: Las mujeres embarazadas deben asegurarse de obtener suficiente descanso y sueño de calidad durante el embarazo para mantener su salud física y mental.
-       
-       Manejo del estrés: El embarazo puede ser un momento emocionalmente estresante para las mujeres, por lo que es importante que aprendan a manejar el estrés y la ansiedad de manera efectiva. Se pueden utilizar técnicas como la meditación, el yoga o la terapia de conversación para ayudar a manejar el estrés durante el embarazo.
-       
-       Cuidado prenatal regular: Las mujeres embarazadas deben asistir regularmente a las citas de cuidado prenatal para monitorear su salud y la del feto, recibir pruebas y recibir educación sobre el embarazo y el parto.</p>
-   <button class="primary-button add-to-cart-button">
-     <img src="./assets/icons/check-circle.svg" alt="Leído">
-     Marcar como leído
-   </button>
- </div>
-</aside>  */
 
 function renderInfo(arr){
     for(product of arr){

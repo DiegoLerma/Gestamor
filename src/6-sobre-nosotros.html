@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gestamor: Automonitoreo en el embarazo</title>
+
+  <link rel="shortcut icon" href="../assets/imgs/logo.PNG" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --hospital-green: #3D3657;
+    --light-pink: #9E86DB;
+    --very-light-pink: #D0ADE0;
+    --text-input-field: #ffdef7;
+    --sm:30px;
+    --md:35px;
+    --lg:40px;
+    }
+    
+    body{
+    
+        font-family: 'Quicksand', sans-serif;
+        margin:0;
+        overflow-x: hidden;
+
+    }
+
+    .login{
+        /* background-color: var(--text-input-field); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .form-container{
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 80%;
+        background-color: var(--white);
+        /* background-color: white; */
+        padding: 30px;
+    }
+    .logo{
+        width: 100px;
+        /* margin-bottom: 48px; */
+        justify-self: center;
+        /* display: none; */
+    }
+    .logo-login{
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .navbar-email {
+color: var(--light-pink);
+font-size: var(--md);
+margin-right: 12px;
+cursor: pointer;
+/* margin-top: 30px; */
+}
+
+.navbar-email:hover{
+color: var(--hospital-green);
+}
+    .title{
+        font-size: var(--lg);
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    .subtitle{
+        /* color: var(--very-light-pink); */
+        font-size: var(--md);
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    .label{
+        font-size: var(--sm);
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+    .input{
+        background-color: #ffe1f8;
+        border: none;
+        border-radius: 8px;
+        height: 50px;
+        font-size: var(--md);
+        padding: 6px;
+        margin-bottom: 12px;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .primary-button{
+        background-color: var(--hospital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 50px;
+    }
+    .login-button{
+        margin-top: 14px;
+        margin-bottom: 30px;
+    }
+      /* NavBar general */
+nav {
+display: flex;
+justify-content: space-between;
+padding: 0 24px;
+border-bottom: 1px solid var(--very-light-pink);
+align-items: center;
+vertical-align: auto;
+}
+
+
+.navbar-left ul,
+.navbar-right ul {
+list-style: none;
+padding: 0;
+/* margin: 0; */
+display: flex;
+align-items: center;
+
+}
+.navbar-left {
+display: flex;
+align-items: center;
+}
+.navbar-right {
+/* display: flex; */
+align-items: center;
+}
+.navbar-left ul {
+margin-left: 12px;
+/* min-width: 200px; */
+}
+
+.navbar-left ul li {
+margin-left: 12px;
+text-align: center;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a {
+text-decoration: none;
+color: var(--very-light-pink);
+border: 1px solid var(--white);
+padding: 8px;
+border-radius: 8px;
+font-size: var(--md);
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+border: 1px solid var(--hospital-green);
+color: var(--very-light-pink);
+}
+
+.main-title{
+text-align: center;
+color: #a7905b;
+}
+.main-header p{
+text-align: justify;
+margin: 20px 25px;
+}
+
+.main-plans-container{
+width: 100%;
+min-width: 320px;
+/* padding-bottom: 70px; */
+text-align: center;
+/* background-color: var(--grey); */
+}
+
+.plans--title{
+width: 90%;
+min-width: 288px;
+height: auto;
+margin: 0 auto;
+/* margin-bottom: 50px; */
+}
+
+.plans--title h2{
+/* padding-top: 50px; */
+font-size: 2.4rem;
+font-weight: bold;
+line-height: 2.6rem;
+color: #102138;
+
+}
+
+.plans--title p{
+/* padding-top: 30px; */
+font-size: 1.4rem;
+font-weight: 500;
+line-height: 1.8rem;
+color: #5a4e31;
+}
+
+.plans-container--card{
+position: relative;
+scroll-snap-align: center;
+width: 70%;
+min-width: 190px;
+max-width: 300px;
+height: 380px;
+margin: 5px auto 0;
+padding: 0 15px;
+background-color: var(--just-white);
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+background-color: var(--very-light-pink);
+
+}
+
+.kind-plan{
+position: absolute;
+width: 120px;
+/* height: 31px; */
+padding: 6px;
+top: 65px;
+left: calc(50% - 65px);
+font-size: 1rem;
+border-radius: 8px;
+color: var(--white);
+text-shadow: 0px 0px 1px #fff;
+
+}
+
+.plan-card-img img{
+object-fit: cover;
+width: 180px;
+height: 180px;
+margin: 0;
+border-radius: 10px;
+position: absolute;
+top: 170px;
+left: 0;
+right: 0;
+margin: 0 auto;
+}
+
+.right-card{
+margin-right: 30%;
+}
+.left-card{
+margin-left: 30%;
+}
+.recommended{
+background-color: var(--bitcoin-orange);
+}
+.basic{
+background-color: var(--secondary-blue);
+}
+.lifelong{
+background-color: var(--warm-black);
+}
+
+.plan-card--title{
+/* padding-top: 30px; */
+font-size: 1.4rem;
+font-weight: 700;
+line-height: 1.8rem;
+color: var(--hospital-green);
+/* text-shadow: 0px 0px 1px black; */
+
+}
+
+
+.plan-card--price span{
+font-size: 1.2rem;
+font-weight: 300;
+vertical-align: text-top;
+}
+
+.plan-card--saving{
+font-size: 1.2rem;
+color: #757575;
+min-height: 30px;
+}
+
+.plan-card--ca{
+width: 150px;
+height: 48px;
+margin-top: 20px;
+background-color: #faf8f7;
+border: 2px solid var(--bitcoin-orange);
+border-radius: 4px;
+font-family: "DM Sans", sans-serif;
+font-size: 1.4rem;
+font-weight: bold;
+line-height: 1.8rem;
+color: var(--black);
+}
+
+.plan-card--ca span{
+display: inline-block;
+width: 20px;
+height: 20px;
+background-image: url(./assets/icons/orange-right-arrow.svg);
+vertical-align: text-bottom;
+
+}
+
+.plans-container--slider{
+display: flex;
+gap: 20px;
+height: 385px;
+overflow-x: scroll;
+overscroll-behavior-x: contain;
+scroll-snap-type: x proximity;
+
+}
+
+
+
+    @media (max-width: 640px) {
+        .logo{
+            display: block;
+        }         
+        :root{
+        --sm:15px;
+        --md:20px;
+        --lg:25px;
+        --nav:15px;
+        }   
+        nav{
+            display: none;
+        }
+    }
+</style>
+  <link rel="stylesheet" href="./style.css">
+  
+
+</head>
+<body class="body">
+
+    <nav>
+      <img src="../assets/icons/icon_menu.svg" alt="menu" class="menu">
+  
+      <div class="navbar-left">
+        <img src="../assets/imgs/dark-logo-big-title.svg" alt="logo" class="logo" onclick="location.href='../index.html'">
+  
+        <ul>
+          <li>
+            <a href="../index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./9-mi-embarazo.html">Mi embarazo</a>
+          </li>
+          <li>
+            <a href="./8-orientacion.html">Orientación vocacional</a>
+          </li>
+          <li>
+            <a href="./7-apoyos_becas.html">Apoyos y becas</a>
+          </li>
+          <li>
+            <a href="../src/6-about-us.html">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1Ls9IoTLpWbkfk3x7RFhxNTkjOJYWybqA/view?usp=sharing">Este proyecto</a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="navbar-right">
+        <ul>
+          <li class="navbar-email">correo@ejemplo.com</li>
+          <li class="navbar-shopping-cart">
+              <p>Recordatorios</p>
+  
+            <div>2</div>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="desktop-menu inactive">
+          <ul>
+            <li>
+              <a href="#" class="title">Sobre mí</a>
+            </li>
+      
+            <li>
+              <a href="../src/5-edit.html">Mi cuenta</a>
+            </li>
+      
+            <li>
+              <a href="../src/3-login.html">Cerrar sesión</a>
+            </li>
+          </ul>
+      </div>
+      <div class="mobile-menu inactive">
+        <ul>
+          <li>
+            <a href="../index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./9-mi-embarazo.html">Mi embarazo</a>
+          </li>
+          <li>
+            <a href="./8-orientacion.html">Orientación vocacional</a>
+          </li>
+          <li>
+            <a href="./7-apoyos_becas.html">Apoyos y becas</a>
+          </li>
+          <li>
+            <a href="../src/6-about-us.html">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1Ls9IoTLpWbkfk3x7RFhxNTkjOJYWybqA/view?usp=sharing">Este proyecto</a>
+          </li>
+        </ul>
+    
+        <ul>
+
+          <li>
+            <a href="../src/5-edit.html">Mi cuenta</a>
+          </li>
+        </ul>
+    
+        <ul>
+          <li>
+            <a href="../src/5-edit.html" class="email">correo@ejemplo.com</a>
+          </li>
+          <li>
+            <a href="../src/3-login.html" class="sign-out">Cerrar sesión</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <aside id="shoppingCartContainer" class="inactive">
+    <div class="title-container">
+      <img src="../assets/icons/check-circle.svg" alt="arrow">
+      <p class="title">Actualmente tienes 10 SDG</p>
+    </div>
+  
+    <div class="my-order-content">
+      <div class="shopping-cart">
+        <figure>
+          <img src="https://images.pexels.com/photos/7089623/pexels-photo-7089623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike">
+        </figure>
+        <p>US obstétrico</p>
+        <p>Primer trimestre</p>
+        <img src="../assets/icons/icon_close.png" alt="close">
+      </div>
+  
+      <div class="shopping-cart">
+        <figure>
+          <img src="https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike">
+        </figure>
+        <p>Análisis de sangre</p>
+        <p>Primer trimestre</p>
+        <img src="../assets/icons/icon_close.png" alt="close">
+      </div>
+  
+      <div class="order">
+        <p>
+          <span>2 tareas por completar</span>
+        </p>
+        <p>Quedan 2 semanas para completar el primer trimestre</p>
+      </div>
+  
+      <button class="primary-button">
+        Ver más
+      </button>
+    </div>
+  </div>
+  </aside>
+  
+  
+  <section class="main-container" style="display:none">
+    <div class="cards-container">
+      
+    </div>
+  </section>
+<section class="main-Container">
+  <div class="main-info">
+    
+    
+  </div>
+</section>
+<section>    
+  <div class="main-header">
+          <!-- <img src="../assets/imgs/dark-logo-title.svg" alt="" style="height: 100px; display: block; margin: 0 auto;" onclick="location.href='../index.html'"> -->
+          <h1 class="main-title">¿Quiénes somos?</h1>
+          <p>Somos un grupo de estudiantes de Medicina de la Universidad Guanajuato que busca mejorar la atención en salud que reciben las pacientes embarazadas, sobre todo en momentos difíciles como es la adolescencia o en etapas de la vida con alta exigencia, como la etapa estudiantil y la adultez temprana.</p>
+      </div>
+      <section id="planes" class="main-plans-container">
+          <div class="plans--title">
+              <h2>Médicos UG.</h2>
+              <p>Un proyecto de y para estudiantes.</p>
+          </div>
+          <section class="plans-container--slider">
+              <article class="plans-container--card left-card">
+                  <p class="kind-plan recommended">Developer y estudiante de medicina</p>
+                  <div class="plan-info-container">
+                      <h3 class="plan-card--title">Diego Lerma</h3>
+                      <figure class="plan-card-img">
+                          <img src="../assets/imgs/DiegoLerma.jpg" alt="" onclick=`location.href='https://www.instagram.com/diegolerma/'`>
+                      </figure>
+                  </div>
+              </article>
+              <article class="plans-container--card">
+                  <p class="kind-plan basic">Estudiante de medicina</p>
+                  <div class="plan-info-container">
+                      <h3 class="plan-card--title">Elsa Arrona</h3>
+                      <figure class="plan-card-img">
+                          <img src="../assets/imgs/Elsa.jpg" alt="">
+                      </figure>
+                  </div>
+              </article>
+              <article class="plans-container--card">
+                  <p class="kind-plan lifelong">Estudiante de medicina</p>
+                  <div class="plan-info-container">
+                      <h3 class="plan-card--title">Yadira Landin</h3>
+                      <figure class="plan-card-img">
+                          <img src="../assets/imgs/Yadira2.png" alt="">
+                      </figure>
+                  </div>
+              </article>
+              <article class="plans-container--card right-card">
+                  <p class="kind-plan lifelong">Médico Ginecólogo</p>
+                  <div class="plan-info-container">
+                      <h3 class="plan-card--title">Dr. Guillermo Rodríguez</h3>
+                      <figure class="plan-card-img">
+                          <img src="../assets/imgs/Guillermo4.png" alt="">
+                      </figure>
+                  </div>
+              </article>
+          </section>
+      </section>
+  </section>
+</body>
+<footer>
+  <section class="left">
+      <ul>
+          <li><a href="https://www.ugto.mx/convocatorias/download/5-academia/183-18-concurso-de-creatividad-e-innovacion-2023">Desarrollado por Diego Lerma, Karen Yadira y Elsa Arrona para el 18° Concurso de Innovación</a></li>
+      </ul>
+    </section>
+    <section class="right">
+    <ul>
+        <li>Gestamor 2023®️</li>
+    </ul>
+  </section>
+</footer>
+<script src="./main.js"></script>
+</html>

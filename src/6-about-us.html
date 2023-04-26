@@ -347,40 +347,147 @@
  
 </head>
 <body>
+   
     <nav>
-        <img src="../assets/imgs/logo-purple.svg" alt="menu" class="menu">
+        <img src="../assets/icons/icon_menu.svg" alt="menu" class="menu">
     
         <div class="navbar-left">
-          <img src="../assets/imgs/logo-purple.svg" alt="logo" class="logo">
+          <img src="../assets/imgs/dark-logo-big-title.svg" alt="logo" class="logo" onclick="location.href='../index.html'">
     
           <ul>
             <li>
-              <a href="#">Inicio</a>
+              <a href="../index.html">Inicio</a>
             </li>
             <li>
-              <a href="#">Lactancia</a>
+              <a href="./9-mi-embarazo.html">Mi embarazo</a>
             </li>
             <li>
-              <a href="#">Datos de alarma</a>
+              <a href="./8-orientacion.html">Orientación vocacional</a>
             </li>
             <li>
-              <a href="https://drive.google.com/file/d/1Ls9IoTLpWbkfk3x7RFhxNTkjOJYWybqA/view?usp=sharing">Sobre nosotros</a>
+              <a href="./7-apoyos_becas.html">Apoyos y becas</a>
             </li>
             <li>
-              <a href="#">Más</a>
+              <a href="../src/6-about-us.html">Sobre nosotros</a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1Ls9IoTLpWbkfk3x7RFhxNTkjOJYWybqA/view?usp=sharing">Este proyecto</a>
             </li>
           </ul>
         </div>
     
         <div class="navbar-right">
           <ul>
-            <li class="navbar-email" onclick="location.href='./3-login.html'">Cerrar sesion</li>
+            <li class="navbar-email">correo@ejemplo.com</li>
+            <li class="navbar-shopping-cart">
+                <p>Recordatorios</p>
+    
+              <div>2</div>
+            </li>
+          </ul>
+        </div>
+    
+        <div class="desktop-menu inactive">
+            <ul>
+              <li>
+                <a href="#" class="title">Sobre mí</a>
+              </li>
+        
+              <li>
+                <a href="../src/5-edit.html">Mi cuenta</a>
+              </li>
+        
+              <li>
+                <a href="../src/3-login.html">Cerrar sesión</a>
+              </li>
+            </ul>
+        </div>
+        <div class="mobile-menu inactive">
+          <ul>
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="./9-mi-embarazo.html">Mi embarazo</a>
+            </li>
+            <li>
+              <a href="./8-orientacion.html">Orientación vocacional</a>
+            </li>
+            <li>
+              <a href="./7-apoyos_becas.html">Apoyos y becas</a>
+            </li>
+            <li>
+              <a href="../src/6-about-us.html">Sobre nosotros</a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1Ls9IoTLpWbkfk3x7RFhxNTkjOJYWybqA/view?usp=sharing">Este proyecto</a>
+            </li>
+          </ul>
+      
+          <ul>
+  
+            <li>
+              <a href="../src/5-edit.html">Mi cuenta</a>
+            </li>
+          </ul>
+      
+          <ul>
+            <li>
+              <a href="../src/5-edit.html" class="email">correo@ejemplo.com</a>
+            </li>
+            <li>
+              <a href="../src/3-login.html" class="sign-out">Cerrar sesión</a>
+            </li>
           </ul>
         </div>
     </nav>
-
-    <main>
-        <div class="main-header">
+    <aside id="shoppingCartContainer" class="inactive">
+      <div class="title-container">
+        <img src="../assets/icons/check-circle.svg" alt="arrow">
+        <p class="title">Actualmente tienes 10 SDG</p>
+      </div>
+    
+      <div class="my-order-content">
+        <div class="shopping-cart">
+          <figure>
+            <img src="https://images.pexels.com/photos/7089623/pexels-photo-7089623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike">
+          </figure>
+          <p>US obstétrico</p>
+          <p>Primer trimestre</p>
+          <img src="../assets/icons/icon_close.png" alt="close">
+        </div>
+    
+        <div class="shopping-cart">
+          <figure>
+            <img src="https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike">
+          </figure>
+          <p>Análisis de sangre</p>
+          <p>Primer trimestre</p>
+          <img src="../assets/icons/icon_close.png" alt="close">
+        </div>
+    
+        <div class="order">
+          <p>
+            <span>2 tareas por completar</span>
+          </p>
+          <p>Quedan 2 semanas para completar el primer trimestre</p>
+        </div>
+    
+        <button class="primary-button">
+          Ver más
+        </button>
+      </div>
+    </div>
+    </aside>
+    
+    
+    <section class="main-container" style="display:none">
+      <div class="cards-container">
+        
+      </div>
+    </section>
+    <section>    
+    <div class="main-header">
             <img src="../assets/imgs/dark-logo-title.svg" alt="" style="height: 100px; display: block; margin: 0 auto;" onclick="location.href='../index.html'">
             <h1 class="main-title">¿Quiénes somos?</h1>
             <p>Somos un grupo de estudiantes de Medicina de la Universidad Guanajuato que busca mejorar la atención en salud que reciben las pacientes embarazadas, sobre todo en momentos difíciles como es la adolescencia o en etapas de la vida con alta exigencia, como la etapa estudiantil y la adultez temprana.</p>
@@ -429,6 +536,7 @@
                 </article>
             </section>
         </section>
+    </section>
     </main>
     
 </body>
